@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: products-crawler
+
+server:
+  port: 9001
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9002/eureka/
+  instance:
+    hostname: localhost

@@ -1,5 +1,7 @@
 package com.sachin4java.productscrawler.bo.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,6 +19,11 @@ public class CrawlerBOImpl implements CrawlerBO{
 	@Override
 	public ProductCrawl crawlByProductName(String productname) {
 		return crawlerService.crawlByProductName(productname);
+	}
+
+	@Override
+	public List<ProductCrawl> crawlByCategoryName(String categoryname) {
+	  return crawlerService.crawlByCategoryName(categoryname);
 	}
 
 }
